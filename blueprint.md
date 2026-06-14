@@ -19,4 +19,15 @@ This document outlines the design and implementation of the Grocery Weekly Sales
     *   Cleared all related JavaScript random number generation and DOM manipulation logic from [main.js](file:///workspaces/groceryweeklysales/main.js).
     *   Removed styling for the generator button and ball items from [style.css](file:///workspaces/groceryweeklysales/style.css).
 
+*   **Implement Navigation & Mart Pages (Completed):**
+    *   Created a horizontal navigation bar in `index.html` with links for "Home", "H Mart", "Hannam Mart", and "Lotte Plaza Market".
+    *   Created three new interactive weekly sales pages: [hmart.html](file:///workspaces/groceryweeklysales/hmart.html), [hannam.html](file:///workspaces/groceryweeklysales/hannam.html), and [lotte.html](file:///workspaces/groceryweeklysales/lotte.html).
+    *   Ensured all pages share the exact same `<h1>Grocery Weekly Sales</h1>` header and horizontal navigation bar.
+    *   Implemented active state styling highlighting the current page link (each mart has its own signature brand color: rose for H Mart, emerald for Hannam Mart, amber for Lotte Plaza Market).
+    *   Added modern grocery item grid cards displaying item category, name, discounted/regular price, a custom discount badge, and interactive add-to-list buttons.
+    *   Added interactive shopping list toggle states in [main.js](file:///workspaces/groceryweeklysales/main.js).
+    *   Polished look and feel using custom typography, transitions, shadows, and responsive designs in [style.css](file:///workspaces/groceryweeklysales/style.css).
+
+
+
 

@@ -5,11 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grocery Weekly Sales</title>
   <link href='/style.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <div class="header-container">
+      <h1>Grocery Weekly Sales</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active-home">🏠 Home</a></li>
+          <li><a href="hmart.html" class="nav-link">🍎 H Mart</a></li>
+          <li><a href="hannam.html" class="nav-link">🥬 Hannam Mart</a></li>
+          <li><a href="lotte.html" class="nav-link">🍇 Lotte Plaza Market</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Grocery Weekly Sales</h1>
+    <div class="welcome-card">
+      <div class="welcome-logo">🛒</div>
+      <h2 class="welcome-title">Welcome to Grocery Weekly Sales</h2>
+      <p class="welcome-desc">Compare weekly sales and flyer items across your favorite local Korean & Asian supermarkets. Select a market below to view hot deals!</p>
+      
+      <div class="welcome-grid">
+        <a href="hmart.html" class="welcome-item hmart">
+          <div class="welcome-item-icon">🍎</div>
+          <div class="welcome-item-title">H Mart</div>
+          <p class="welcome-desc" style="font-size: 0.9rem; margin-bottom: 0; margin-top: 0.5rem;">Fresh produce, premium meats, and weekly Asian groceries.</p>
+        </a>
+        <a href="hannam.html" class="welcome-item hannam">
+          <div class="welcome-item-icon">🥬</div>
+          <div class="welcome-item-title">Hannam Mart</div>
+          <p class="welcome-desc" style="font-size: 0.9rem; margin-bottom: 0; margin-top: 0.5rem;">Traditional Korean foods, fresh vegetables, and home-style side dishes.</p>
+        </a>
+        <a href="lotte.html" class="welcome-item lotte">
+          <div class="welcome-item-icon">🍇</div>
+          <div class="welcome-item-title">Lotte Plaza Market</div>
+          <p class="welcome-desc" style="font-size: 0.9rem; margin-bottom: 0; margin-top: 0.5rem;">Quality Asian and international grocery items at great prices.</p>
+        </a>
+      </div>
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2026 Grocery Weekly Sales. All rights reserved.</p>
+  </footer>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
