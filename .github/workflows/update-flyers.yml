@@ -1,0 +1,43 @@
+name: Update H Mart Weekly Flyers
+
+on:
+  schedule:
+    # Run every Friday at 05:00 UTC (12:00 AM EST / 01:00 AM EDT)
+    - cron: '0 5 * * 5'
+  workflow_dispatch:
+    # Allows manual triggering from the GitHub Actions tab
+
+jobs:
+  update-flyers:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allows pushing the commit back to the repo
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Flyer Update Script
+        run: node scripts/update-flyers.js
+
+      - name: Check for Changes & Commit
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Stage modified files
+          git add hmart.html
+          
+          # Commit only if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update H Mart weekly flyers [skip ci]"
+            git push origin main
+            echo "Successfully updated and pushed new flyers."
+          else
+            echo "No changes in flyer URLs detected."
+          fi

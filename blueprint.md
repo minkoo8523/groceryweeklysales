@@ -33,6 +33,11 @@ This document outlines the design and implementation of the Grocery Weekly Sales
     *   Rebuilt [hmart.html](file:///workspaces/groceryweeklysales/hmart.html) with a flyer tab-switching viewer that displays the five actual live flyer assets (English, Chinese NY, Chinese NJ, Houseware Sale, and 40th Anniversary Sale).
     *   Added dynamic tab-switching interactive logic in [main.js](file:///workspaces/groceryweeklysales/main.js) and custom styles in [style.css](file:///workspaces/groceryweeklysales/style.css) for responsive flyer image display and actions (e.g., viewing full-size images and linking to the official site).
 
+*   **Weekly Automated Flyer Updates (Completed):**
+    *   Created [scripts/update-flyers.js](file:///workspaces/groceryweeklysales/scripts/update-flyers.js), a zero-dependency Node.js automation script that fetches the live H Mart website, extracts the latest flyer images using regular expressions, and updates [hmart.html](file:///workspaces/groceryweeklysales/hmart.html).
+    *   Configured a GitHub Actions workflow in [.github/workflows/update-flyers.yml](file:///workspaces/groceryweeklysales/.github/workflows/update-flyers.yml) that executes this script on a schedule every Friday at 05:00 UTC (12:00 AM EST / 01:00 AM EDT) and automatically commits/pushes the updated flyer URLs back to the repository.
+
+
 
 
 
