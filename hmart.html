@@ -26,69 +26,26 @@
 
   <main>
     <div class="page-intro">
-      <h2>🍎 H Mart Weekly Sales</h2>
-      <p>Enjoy our handpicked weekly specials on high-quality produce, fresh meats, and your favorite Asian brands. Offers valid through this week.</p>
+      <h2>🍎 H Mart Weekly Ads (NY / NJ)</h2>
+      <p>Compare and view live weekly specials directly from H Mart's New York & New Jersey locations. Toggle tabs below to switch flyers.</p>
     </div>
 
-    <div class="sales-grid">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <span class="badge badge-hmart">33% OFF</span>
-        <div class="product-image-container">🥩</div>
-        <div class="product-info">
-          <span class="product-category">Meat & Poultry</span>
-          <h3 class="product-title">Premium Beef Short Ribs (Galbi)</h3>
-          <div class="price-container">
-            <span class="sale-price">$19.99</span>
-            <span class="regular-price">$29.99</span>
-          </div>
-          <div class="card-action">Add to Shopping List</div>
-        </div>
+    <div class="flyer-container">
+      <div class="flyer-tabs" id="flyer-tabs-container">
+        <button class="flyer-tab-btn active" data-src="https://hmartus.vtexassets.com/assets/vtex.file-manager-graphql/images/93f27b5a-b38a-45f0-acf7-c1e1c35e7289___7dc841144fc997bcba8c6a01b3cb183f.jpg">English (NY/NJ)</button>
+        <button class="flyer-tab-btn" data-src="https://hmartus.vtexassets.com/assets/vtex.file-manager-graphql/images/166b3439-b4a2-4789-a252-f525984c2d07___0184ee539fde304f6991161c1b506a73.jpg">Chinese (NY)</button>
+        <button class="flyer-tab-btn" data-src="https://hmartus.vtexassets.com/assets/vtex.file-manager-graphql/images/744d42c3-f49c-4dec-a8a5-efffd71e87f5___0184ee539fde304f6991161c1b506a73.jpg">Chinese (NJ)</button>
+        <button class="flyer-tab-btn" data-src="https://hmartus.vtexassets.com/assets/vtex.file-manager-graphql/images/a258b18e-d167-4f78-82ba-3e64b3f06764___ce327fb4f1acefeaf9bf9532dff77c30.jpg">Houseware Sale</button>
+        <button class="flyer-tab-btn" data-src="https://hmartus.vtexassets.com/assets/vtex.file-manager-graphql/images/45e3f0a8-1fc8-4d9e-90b8-645f8b73567d___723d3e11ab68b20e1a4f579514cde6c3.jpg">40th Anniversary</button>
       </div>
 
-      <!-- Product 2 -->
-      <div class="product-card">
-        <span class="badge badge-hmart">Fresh Deal</span>
-        <div class="product-image-container">🍎</div>
-        <div class="product-info">
-          <span class="product-category">Produce</span>
-          <h3 class="product-title">Sweet Fuji Apples (3 lb bag)</h3>
-          <div class="price-container">
-            <span class="sale-price">$3.99</span>
-            <span class="regular-price">$5.99</span>
-          </div>
-          <div class="card-action">Add to Shopping List</div>
-        </div>
+      <div class="flyer-image-wrapper">
+        <img id="active-flyer-image" class="flyer-image" src="https://hmartus.vtexassets.com/assets/vtex.file-manager-graphql/images/93f27b5a-b38a-45f0-acf7-c1e1c35e7289___7dc841144fc997bcba8c6a01b3cb183f.jpg" alt="H Mart Weekly Ad Flyer" />
       </div>
 
-      <!-- Product 3 -->
-      <div class="product-card">
-        <span class="badge badge-hmart">Special</span>
-        <div class="product-image-container">🍜</div>
-        <div class="product-info">
-          <span class="product-category">Pantry</span>
-          <h3 class="product-title">Nongshim Shin Ramyun Multipack (16pk)</h3>
-          <div class="price-container">
-            <span class="sale-price">$12.99</span>
-            <span class="regular-price">$15.99</span>
-          </div>
-          <div class="card-action">Add to Shopping List</div>
-        </div>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card">
-        <span class="badge badge-hmart">Hot Buy</span>
-        <div class="product-image-container">🥬</div>
-        <div class="product-info">
-          <span class="product-category">Produce</span>
-          <h3 class="product-title">Fresh Napa Cabbage (per lb)</h3>
-          <div class="price-container">
-            <span class="sale-price">$0.79</span>
-            <span class="regular-price">$1.29</span>
-          </div>
-          <div class="card-action">Add to Shopping List</div>
-        </div>
+      <div class="flyer-actions">
+        <a id="view-full-btn" href="https://hmartus.vtexassets.com/assets/vtex.file-manager-graphql/images/93f27b5a-b38a-45f0-acf7-c1e1c35e7289___7dc841144fc997bcba8c6a01b3cb183f.jpg" target="_blank" class="flyer-action-btn">🔍 View Full Image</a>
+        <a id="official-site-btn" href="https://www.hmart.com/weekly-ads/new-york-new-jersey" target="_blank" class="flyer-action-btn">🌐 H Mart Official Page</a>
       </div>
     </div>
   </main>

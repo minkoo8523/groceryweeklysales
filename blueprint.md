@@ -28,6 +28,12 @@ This document outlines the design and implementation of the Grocery Weekly Sales
     *   Added interactive shopping list toggle states in [main.js](file:///workspaces/groceryweeklysales/main.js).
     *   Polished look and feel using custom typography, transitions, shadows, and responsive designs in [style.css](file:///workspaces/groceryweeklysales/style.css).
 
+*   **H Mart Live Flyer Integration (Completed):**
+    *   Scraped and extracted the exact image URLs representing H Mart's live weekly flyers for New York and New Jersey from their official site.
+    *   Rebuilt [hmart.html](file:///workspaces/groceryweeklysales/hmart.html) with a flyer tab-switching viewer that displays the five actual live flyer assets (English, Chinese NY, Chinese NJ, Houseware Sale, and 40th Anniversary Sale).
+    *   Added dynamic tab-switching interactive logic in [main.js](file:///workspaces/groceryweeklysales/main.js) and custom styles in [style.css](file:///workspaces/groceryweeklysales/style.css) for responsive flyer image display and actions (e.g., viewing full-size images and linking to the official site).
+
+
 
 
 

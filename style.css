@@ -330,3 +330,102 @@ footer {
   color: var(--text-muted);
   font-size: 0.875rem;
 }
+
+/* Flyer Viewer styles */
+.flyer-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  margin: 1rem auto 3rem auto;
+  max-width: 1000px;
+}
+
+.flyer-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+}
+
+.flyer-tab-btn {
+  background-color: #f1f5f9;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.flyer-tab-btn:hover {
+  background-color: #e2e8f0;
+  color: var(--text-dark);
+}
+
+.flyer-tab-btn.active {
+  background-color: var(--hmart-color);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(225, 29, 72, 0.2);
+}
+
+.flyer-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  position: relative;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  min-height: 400px;
+}
+
+.flyer-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.flyer-image:hover {
+  transform: scale(1.01);
+}
+
+.flyer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.flyer-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.flyer-action-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
