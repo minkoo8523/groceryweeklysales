@@ -26,69 +26,22 @@
 
   <main>
     <div class="page-intro">
-      <h2>🥬 Hannam Mart Weekly Sales</h2>
-      <p>Traditional Korean foods, fresh local farm produce, and home-style side dishes at the best prices of the week.</p>
+      <h2>🥬 Hannam Mart Weekly Sales (Fort Lee, NJ)</h2>
+      <p>Compare and view live weekly specials from Hannam Mart's Fort Lee location. Toggle tabs below to switch flyers.</p>
     </div>
 
-    <div class="sales-grid">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <span class="badge badge-hannam">30% OFF</span>
-        <div class="product-image-container">🥓</div>
-        <div class="product-info">
-          <span class="product-category">Meat & Poultry</span>
-          <h3 class="product-title">Fresh Pork Belly (Samgyeopsal)</h3>
-          <div class="price-container">
-            <span class="sale-price">$8.99</span>
-            <span class="regular-price">$12.99</span>
-          </div>
-          <div class="card-action">Add to Shopping List</div>
-        </div>
+    <div class="flyer-container hannam-theme">
+      <div class="flyer-tabs" id="flyer-tabs-container">
+        <button class="flyer-tab-btn active" data-src="">Main Flyer</button>
       </div>
 
-      <!-- Product 2 -->
-      <div class="product-card">
-        <span class="badge badge-hannam">Best Seller</span>
-        <div class="product-image-container">🍐</div>
-        <div class="product-info">
-          <span class="product-category">Produce</span>
-          <h3 class="product-title">Premium Korean K-Pear (Gift Box)</h3>
-          <div class="price-container">
-            <span class="sale-price">$19.99</span>
-            <span class="regular-price">$28.00</span>
-          </div>
-          <div class="card-action">Add to Shopping List</div>
-        </div>
+      <div class="flyer-image-wrapper">
+        <img id="active-flyer-image" class="flyer-image" src="https://njhannam.com/wp-content/uploads/2026/06/NJ-Hannam_0612-2026-F-scaled.jpg" alt="Hannam Mart Weekly Ad Flyer" />
       </div>
 
-      <!-- Product 3 -->
-      <div class="product-card">
-        <span class="badge badge-hannam">Sale</span>
-        <div class="product-image-container">🍚</div>
-        <div class="product-info">
-          <span class="product-category">Pantry</span>
-          <h3 class="product-title">CJ Hetbahn Cooked White Rice (12pk)</h3>
-          <div class="price-container">
-            <span class="sale-price">$10.99</span>
-            <span class="regular-price">$14.99</span>
-          </div>
-          <div class="card-action">Add to Shopping List</div>
-        </div>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card">
-        <span class="badge badge-hannam">Special</span>
-        <div class="product-image-container">🍜</div>
-        <div class="product-info">
-          <span class="product-category">Pantry</span>
-          <h3 class="product-title">Anchovy Kalguksu Noodle (4pk)</h3>
-          <div class="price-container">
-            <span class="sale-price">$5.49</span>
-            <span class="regular-price">$7.99</span>
-          </div>
-          <div class="card-action">Add to Shopping List</div>
-        </div>
+      <div class="flyer-actions">
+        <a id="view-full-btn" href="https://njhannam.com/wp-content/uploads/2026/06/NJ-Hannam_0612-2026-F-scaled.jpg" target="_blank" class="flyer-action-btn">🔍 View Full Image</a>
+        <a id="official-site-btn" href="https://njhannam.com/weekly-sale/" target="_blank" class="flyer-action-btn">🌐 Hannam Official Page</a>
       </div>
     </div>
   </main>

@@ -4,6 +4,7 @@ const path = require('path');
 async function updateFlyers() {
   await updateHMart();
   await updateLotte();
+  await updateHannam();
 }
 
 async function updateHMart() {
@@ -142,6 +143,65 @@ async function updateLotte() {
     console.log('lotte.html updated.');
   } catch (error) {
     console.error('Error updating Lotte flyers:', error.message);
+  }
+}
+
+async function updateHannam() {
+  console.log('Fetching live Hannam Mart weekly ads page...');
+  try {
+    const res = await fetch('https://njhannam.com/weekly-sale/');
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    const html = await res.text();
+    console.log('Hannam page fetched successfully. Extracting flyer URL...');
+
+    // Regex to find the main flyer image URL (scaled version is usually the highest res)
+    const regex = /https:\/\/njhannam\.com\/wp-content\/uploads\/[0-9/]+NJ-Hannam_[^"'> ]+-scaled\.jpg/i;
+    const match = html.match(regex);
+    let flyerUrl = '';
+
+    if (match) {
+      flyerUrl = match[0];
+      console.log('Hannam extracted URL:', flyerUrl);
+    } else {
+      console.warn('Warning: Could not find Hannam flyer URL with -scaled.jpg. Trying fallback...');
+      const fallbackRegex = /https:\/\/njhannam\.com\/wp-content\/uploads\/[0-9/]+NJ-Hannam_[^"'> ]+\.jpg/i;
+      const fallbackMatch = html.match(fallbackRegex);
+      if (fallbackMatch) {
+        flyerUrl = fallbackMatch[0];
+        console.log('Hannam extracted fallback URL:', flyerUrl);
+      }
+    }
+
+    if (!flyerUrl) {
+      throw new Error('No Hannam flyer URL could be extracted.');
+    }
+
+    const hannamPath = path.join(__dirname, '..', 'hannam.html');
+    if (!fs.existsSync(hannamPath)) {
+      console.warn('hannam.html not found, skipping update.');
+      return;
+    }
+
+    let hannamContent = fs.readFileSync(hannamPath, 'utf8');
+
+    // Update active flyer image
+    const imgRegex = /(<img[^>]+id="active-flyer-image"[^>]*src=")[^"]*("[^>]*>)/i;
+    if (hannamContent.match(imgRegex)) {
+      hannamContent = hannamContent.replace(imgRegex, `$1${flyerUrl}$2`);
+    }
+
+    // Update view full button href
+    const hrefRegex = /(<a[^>]+id="view-full-btn"[^>]*href=")[^"]*("[^>]*>)/i;
+    if (hannamContent.match(hrefRegex)) {
+      hannamContent = hannamContent.replace(hrefRegex, `$1${flyerUrl}$2`);
+    }
+
+    fs.writeFileSync(hannamPath, hannamContent, 'utf8');
+    console.log('hannam.html updated.');
+  } catch (error) {
+    console.error('Error updating Hannam flyers:', error.message);
   }
 }
 

@@ -381,6 +381,12 @@ footer {
   box-shadow: 0 4px 6px -1px rgba(225, 29, 72, 0.2);
 }
 
+/* Hannam specific active tab */
+.hannam-theme .flyer-tab-btn.active {
+  background-color: var(--hannam-color);
+  box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.2);
+}
+
 /* Lotte specific active tab */
 .lotte-theme .flyer-tab-btn.active {
   background-color: var(--lotte-color);
